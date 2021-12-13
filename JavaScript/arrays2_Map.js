@@ -61,7 +61,6 @@ console.log(sqarr);
 
 //Use the map function to produce the below output
 // return an array with true and false for only females between 20 and 30
-// let us say xyz corp wants to hire females between age >= 20 and <= 30
 
 let arr = [
     {
