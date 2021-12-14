@@ -72,3 +72,30 @@ function isPrime(num)
     else
     return false;
 }
+//flatten the 2d array
+
+
+//find the value of composite function
+function f(x)
+{
+    return x*x;
+}
+function g(x)
+{
+    return x+10;
+}
+function h(x)
+{
+    return 2*x;
+}
+let farr = [f, g, h];
+let x = 10;
+
+let res = farr.reverse().reduce(function(pv, cv, ci, oarr){
+    return cv(x);
+},x)
+
+console.log(res);
+
+//union, intersection of array
+//sum of squares of ages of all valid candidates
