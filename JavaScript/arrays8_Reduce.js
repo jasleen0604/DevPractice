@@ -97,5 +97,60 @@ let res = farr.reverse().reduce(function(pv, cv, ci, oarr){
 
 console.log(res);
 
-//union, intersection of array
-//sum of squares of ages of all valid candidates
+
+//intersection of arrays
+let arr1 = [10, 20, 30, 40, 50, 60, 70];
+let arr2 = [10, 30, 50, 70, 90, 100];
+
+let arr2d = [
+    [10, 20, 30, 40, 50, 60, 100],
+    [10, 20, 110, 220, 95, 100],
+    [10, 30, 50, 73, 92, 100,]
+    [10, 40, 50, 70, 90, 100]
+    ]
+
+//intersection of two 1d arrays
+let intersection = arr1.filter(function(v, i, oarr){
+    if(arr2.includes(v))
+    return true;
+    else
+    return false;
+});
+
+console.log(intersection);
+
+//intersection in 2D array
+let intersection = arr2d.reduce(function(pv, cv, ci, oarr){
+    // console.log(cv);
+    let res = pv.filter(function(v,i,oar){
+        if(cv.includes(v))
+        return true;
+        else
+        return false;
+    })
+    return res;
+})
+console.log(intersection);
+
+
+//union of array
+
+let arr2d = [
+    [10, 20, 30, 40, 50, 60, 100],
+    [10, 20, 110, 220, 95, 100],
+    [10, 30, 50, 73, 92, 100],
+    [10, 40, 50, 70, 90, 100]
+    ]
+
+let union = arr2d.reduce(function(pv, cv, ci, oarr){
+    // console.log(pv + "-------" + cv);
+    let res = cv.filter(function(v,i,oar){
+        if(pv.includes(v))
+        return false;
+        else
+        return true;
+    })
+    // console.log(res);
+    return pv.concat(res);
+},[])
+console.log(union);
